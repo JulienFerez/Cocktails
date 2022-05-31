@@ -6,4 +6,10 @@ import { Cocktail } from './interfaces/cocktail.interface';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent {
+  public fruit: string = '';
+
+  public addFruit() {
+    console.log(this.fruit);
+  }
+}
