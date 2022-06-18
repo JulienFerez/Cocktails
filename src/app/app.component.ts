@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Cocktail } from './interfaces/cocktail.interface';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,11 @@ import { Cocktail } from './interfaces/cocktail.interface';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public fruit: string = '';
+  public fruits: string[] = ['fraises', 'kiwi', 'pomme'];
 
-  public addFruit() {
-    console.log(this.fruit);
+  public addFruit() {}
+
+  public deleteFruit(fruit: string) {
+    this.fruits = this.fruits.filter((f) => f !== fruit);
   }
 }
